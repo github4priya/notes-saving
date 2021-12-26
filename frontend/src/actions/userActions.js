@@ -38,9 +38,11 @@ export const login = ( email, password ) => async(dispatch) => {
 };
 
 export const logout = () => async(dispatch) =>{
-  localStorage.removeItem("uerInfo");
+  console.log("userInfo is going to remove now")
+  localStorage.removeItem("userInfo");
   dispatch({type: USER_LOGOUT});
 }
+
 
 
 export const register = (name, email, password, pic) => async(dispatch) =>{
